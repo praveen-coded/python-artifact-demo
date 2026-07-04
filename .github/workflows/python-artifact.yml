@@ -26,6 +26,19 @@ jobs:
       - name: Run python program
         run: python app.py
 
+      - name: Check files and current directory
+        run: |
+          echo "Current Directory:."
+          pwd
+
+          echo ""
+          echo "Files in current directory:."
+          ls -la
+
+          echo ""
+          echo "Searching for result.txt..."
+          find. -name "result.txt"
+
       - name: Show generated file
         run: cat result.txt
 
